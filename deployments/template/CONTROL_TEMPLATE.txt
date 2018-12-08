@@ -1,0 +1,31 @@
+#! /bin/perl
+
+use strict; use warnings;
+
+use lib qw( /opt/CONTROL/controlanyapp_MIT.d/module.d);
+use Control::ScriptConnector;
+
+################
+# SETTINGS BEGIN
+# our( $ID,@TASKS,$LOGPATH)
+
+my $service="ntp.service"; # specify systemctl service
+
+our @TASKS= (
+        #key       => [Safety question, task to execute on shell]
+        #falsetest => [0, qq(false)],
+        #truetest  => [0, qq(true)],
+        start      => [1, qq(sudo systemctl start   $service)],
+        stop       => [1, qq(sudo systemctl stop    $service)],
+        status     => [0, qq(systemctl status  $service)],
+        restart    => [1, qq(sudo systemctl restart $service)],
+        follow     => [0, qq(sudo journalctl -b -ef -u $service)],
+        dump       => [0, qq(sudo journalctl -b -e -u  $service)],
+        catService => [0, qq(sudo systemctl cat     $service)],
+        echoTest   => [0, qq(echo echoTest)],
+        trueSequenceTest   => [0, qq(true && echo "I am always called" || echo "Lucky you I am not")],
+        falseSequenceTest  => [0, qq(false && echo "I am never called" || echo "I am always called")],
+);
+
+# SETTINGS END
+################
