@@ -4,7 +4,7 @@ A free (MIT licensed) shell driven control interface for admins, integrators and
 
 This concept has emerged from my daily work as a solution integrator over many years being tired of stopping, starting, restarting, seing logs, greping logs, tailing logs for the purpose of testing, troubleshooting, maintaining and operating applications and Linux services. To handle these chores you have to remember and recall a lot of details and the admin guide is your best friend, but not any longer!
 
-First of all, I want an abstraction layer. An effective abstraction layer easy to manage. For example "Start" is what I want to do and basically I do not care what is behind. And I have the freedom to add others: "Stop", "Restart", "Status", there is no limit, except useful tasks. And everything you execute via terminal on the shell you can use and define as a task, a suitable tcpdump statement or netstat to see if traffic works etc.
+First of all, I want an abstraction layer. An effective abstraction layer easy to manage. For example "Start" is what I want to do and I do not care to what shell commands this relates basically. And I have the freedom to add others: "Stop", "Restart", "Status", there is no limit, except useful tasks. And everything you execute via terminal on the shell you can use and define as a task, a suitable tcpdump statement or netstat to see if traffic works etc.
 
 The REAL WORLD EXAMPLE below shows how to control tinyproxy and its related tasks with a single controlanyapp script. And the exectuable script is at the same time the configuration. So easy to manage. Get started with CONTROL_TEMPLATE.pl <mycontrolscript.pl>
 
@@ -16,8 +16,8 @@ At any given time the user interface display can be switched to verbose mode so 
 
 By the way controlanyapp is Perl driven, but you don't need to know much of it. The advantage is that Perl is available on Linux and no extra CPAN module is required.
 
-Configuration
-=============
+MASTER YOUR SCRIPT CONFIGURATION
+================================
 This is basically one pre-defined task linked with a taskname: taskname => predefined task (shell statements operators and variables)
 To get the definition of the tasks done the user creates inside the script under the @TASKS array one task per line. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it their shell commands as a task to be executed, like you would type the command into a terminal for execution. Often is the use of shell operators like '&&' and '||' useful, instead of putting one statement terminated by the semicolon to the other should there be a need of a sequence.
 
