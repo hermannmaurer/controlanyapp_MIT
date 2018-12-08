@@ -56,7 +56,7 @@ AND HOW TO GET STARTED?
 
 1) Transfer and execute on your Linux machine the self-extracting script.
 
-	Look up the self-extracting-script.d directory, to find the latest VERSION ready to be used.
+	Look up the root directory, to find the latest VERSION for installation.
 
 		sudo ./controlanyapp_MIT.d_<VERSION>_Installer.sh
 
