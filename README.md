@@ -1,4 +1,4 @@
-# controlanyapp_MIT.d
+# controlanyapp_MIT
 
 A free (MIT licensed) shell driven control interface for admins, integrators and testers - pre-defined task execution - minimizing commands to remember in grouping tasks inside a so called controlanyapp script.
 
@@ -46,7 +46,7 @@ Example:
 
 The 1 after the square bracket requires the user to confirm with an explicit y(es) to be executed. While a 0 will execute the task without asking reconfirmation from the user once chosen.
 
-Examples with handy && || sequence:
+Example with handy && || sequence:
 
 	trueSequenceTest   => [0, qq(true && echo "I am always called" || echo "Lucky you, I am not")],
 	falseSequenceTest  => [0, qq(false && echo "I am never called" || echo "I am always called")],
