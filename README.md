@@ -59,6 +59,7 @@ AND HOW TO GET STARTED?
 
 	Look up the root directory, to find the latest VERSION for installation.
 
+		chmod u+x controlanyapp_MIT.d_1_Installer.sh
 		sudo ./controlanyapp_MIT.d_<VERSION>_Installer.sh
 
 	1.1) The controlanyapp code - which is plain readable Perl source code - is exclusively copied into the /opt/CONTROL directory. The code is in clear text with comments and without obfuscation.
