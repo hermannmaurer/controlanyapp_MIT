@@ -19,9 +19,10 @@ By the way controlanyapp is Perl driven, but you don't need to know much of it. 
 MASTER YOUR SCRIPT CONFIGURATION
 ================================
 This is basically one pre-defined task linked with a taskname: taskname => predefined task (shell statements operators and variables)
-To get the definition of the tasks done the user creates inside the script under the @TASKS array one task per line. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it their shell commands as a task to be executed, like you would type the command into a terminal for execution. Often is the use of shell operators like '&&' and '||' useful, instead of putting one statement terminated by the semicolon to the other should there be a need of a sequence.
+To get the definition of the tasks done the user creates inside the script under the @TASKS array one task per line. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it their shell commands as a task to be executed, like you would type the command into a terminal for execution. 
+Shell operators like '&&' and '||' may prove beneficial between shell commands forcing a conditional sequence, instead of putting one shell command next ot each other terminated via semicolon. Keep in mind conditional statements of this kind rely on the return value of the shell commmand. 
 
-A task is any shell command execution that may contain a statement, pipe, subshell, shell operator and a combination of thereof.
+A task is any shell command/script/binary execution that may contain a statement, pipe, subshell, shell operator and a combination of thereof.
 
 To the configuration, the right value of "=>" is embedded in one of the Perl q() or qq() functions. q() behaves like single quote and qq() behaves like double quote. This also gives you the freedom to use quotation marks without escapes in your task definition.
 
