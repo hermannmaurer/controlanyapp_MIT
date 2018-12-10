@@ -4,7 +4,7 @@ A free (MIT licensed) shell driven control interface for admins, integrators and
 
 This concept has emerged from my daily work as a solution integrator over many years being tired of stopping, starting, restarting, seing logs, greping logs, tailing logs for the purpose of testing, troubleshooting, maintaining and operating applications and Linux services. To handle these chores you have to remember and recall a lot of details and the admin guide is your best friend, but not any longer!
 
-First of all, I want an abstraction layer. An effective abstraction layer easy to manage. For example "Start" is what I want to do and I do not care to what shell commands this translates to basically. And I need the freedom to add others: "Stop", "Restart", "Status", there is no limit, except useful tasks. And everything you execute via terminal on the shell you can use and define as a task, a suitable tcpdump statement or netstat to see if traffic works etc.
+First of all, convenient is an abstraction layer. An effective abstraction layer easy to manage. For example "Start" is what someone wants to do and the person basically does not care to what happens on the shell level. And there needs to be the freedom to add other tasks like Stop, Restart, Status - there is no limit, except useful tasks. And everything what is executable via terminal on the shell can be used to for task the execution - a tcpdump statement or netstat to see if traffic works etc.
 
 The REAL WORLD EXAMPLE below shows how to control tinyproxy and its related tasks with a single controlanyapp script. And the exectuable script is at the same time the configuration. So easy to manage. Get started with CONTROL_TEMPLATE.pl <mycontrolscript.pl>
 
