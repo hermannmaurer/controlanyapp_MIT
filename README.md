@@ -12,7 +12,7 @@ The REAL WORLD EXAMPLE below shows how to control tinyproxy and its related task
 
 This way of working is effective and scales to a high degree as the commandline tasks required to be known for any kind of application are often identical from an abstraction point of view and they are preserved once written in a controlanyapp script. This is the concept supported and materialized by controlanyapp. Common tasknames are for example: stop, start, restart, status and what else comes into someone's mind. Those pre-defined tasks will be helpful for people working on CLI level for Linux applications just with the knowledge of the existance of a controlanyapp script.
 
-The user interface keeps track of task executions in a log file recording the timestamp and taskname.
+The user interface keeps track of task execution in a log file recording the timestamp and taskname.
 
 At any given time the user interface display can be switched to verbose mode so the taskname is expanded with the detailed task information revealing the real command execution on a shell.
 
