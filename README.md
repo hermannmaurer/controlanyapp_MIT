@@ -6,7 +6,7 @@ This concept has emerged from my daily work as a solution integrator over many y
 
 First of all, convenient is an abstraction layer. An effective abstraction layer easy to manage. 
 
-For example, "Start( up an application)" is what someone wants to do, and the person basically does not care about what's happening at the shell level. And there needs to be the freedom to add other tasks like Stop, Restart, Status - there is no limit, except useful tasks. And everything what is executable via terminal on the shell can be used for task execution - a tcpdump statement or netstat to see if traffic works etc.
+For example, "Start( up an application)" is what someone wants to do, and the person basically does not care about what's happening at the shell level. And there needs to be the freedom to add other tasks like Stop, Restart, Status - there is no limit, except useful tasks. And everything what is executable via terminal on the shell can be used for task execution - a tcpdump statement or netstat to see whether traffic works etc.
 
 The REAL WORLD EXAMPLE below shows how to control tinyproxy and its related tasks with a single controlanyapp script. And the exectuable script is at the same time the configuration. So easy to manage. Get started with CONTROL_TEMPLATE.pl <mycontrolscript.pl>
 
