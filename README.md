@@ -21,8 +21,13 @@ By the way controlanyapp is Perl driven, but you don't need to know much of it. 
 MASTER YOUR SCRIPT CONFIGURATION
 ================================
 This is basically one pre-defined task linked with a taskname: taskname => predefined task (shell commands, scripts and binaries)
-To get the definition of the tasks done the user creates inside their controlanyapp script under the @TASKS array one task per line. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it the real commands being executed, like you would type the command into a terminal for execution. 
-Shell operators like '&&' and '||' may prove beneficial between shell commands forcing a conditional sequence, instead of putting one shell command next ot each other terminated via semicolon. Keep in mind conditional statements of this kind rely on the return value of the shell commmand. 
+To get the definition of the tasks done the user creates inside their controlanyapp script under the @TASKS array one task per line. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it the real commands being executed, like you would type the commands into a terminal for execution. 
+
+Within a single task shell operators like '&&' and '||' may prove beneficial between shell commands forcing a conditional sequence, instead of putting one shell command next ot each other terminated by semicolons. Keep in mind the sequence execution depends with operators on the return value of the individual shell commmands.
+
+	task1 => q( cmd1; cmd2) # cmd1 and cmd2 are executed not depending on exit code of cmd1
+	task2 => q( cmd1 && cmd2) # cmd1 and cmd2 are executed depending on true exit code of cmd1
+	task3 => q( cmd1 || cmd2) # cmd1 and possbily cmd2 are executed depending on false exit code of cmd1
 
 A task is any pre-defined shell command/script/binary execution that may contain a statement, pipe, subshell, shell operator and a combination of thereof.
 
