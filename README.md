@@ -21,7 +21,7 @@ By the way controlanyapp is Perl driven, but you don't need to know much of it. 
 MASTER YOUR SCRIPT CONFIGURATION
 ================================
 
-This is basically one pre-defined task linked with a taskname: taskname => predefined task (may include shell commands, shell operators and statements, scripts and binaries)
+This is basically one pre-defined task linked with a taskname: taskname => predefined task (may include shell cmds, operators and statements as well as scripts and binaries)
 
 To get the definition of the tasks done users edit inside their controlanyapp script using an editor (vim) the @TASKS array. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it the real command or a group of commands being executed, like you would type the commands into a terminal for execution. 
 
