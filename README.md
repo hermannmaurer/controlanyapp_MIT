@@ -20,16 +20,18 @@ By the way controlanyapp is Perl driven, but you don't need to know much of it. 
 
 MASTER YOUR SCRIPT CONFIGURATION
 ================================
-This is basically one pre-defined task linked with a taskname: taskname => predefined task (shell commands, scripts and binaries)
-To get the definition of the tasks done the user creates inside their controlanyapp script under the @TASKS array one task per line. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it the real commands being executed, like you would type the commands into a terminal for execution. 
 
-Within a single task shell operators like '&&' and '||' may prove beneficial between shell commands forcing a conditional sequence, instead of putting one shell command next ot each other terminated by semicolons. Keep in mind the sequence execution depends with operators on the return value of the individual cmd being executed.
+This is basically one pre-defined task linked with a taskname: taskname => predefined task (may include shell commands, shell operators and statements, scripts and binaries)
+
+To get the definition of the tasks done users edit inside their controlanyapp script using an editor (vim) the @TASKS array. During configuration time someone determines and notes tasknames infront of "=>" and to the right of it the real command or a group of commands being executed, like you would type the commands into a terminal for execution. 
+
+If you need to have a sequence of commands within a single task shell operators like '&&' and '||' may prove beneficial between single cmds forcing a conditional sequence, instead of putting one shell command next ot each other terminated by semicolons. Keep in mind the sequence execution with operators depends on the return value of the individual cmd being executed.
 
 	task1 => q( cmd1; cmd2) # cmd1 and cmd2 are executed not depending on exit code of cmd1
 	task2 => q( cmd1 && cmd2) # cmd1 and cmd2 are executed depending on true exit code of cmd1
 	task3 => q( cmd1 || cmd2) # cmd1 and possbily cmd2 are executed depending on false exit code of cmd1
 
-A task is any pre-defined shell command/script/binary execution that may contain a statement, pipe, subshell, shell operator and a combination of thereof.
+A task is any pre-defined shell cmd/script/binary execution that may be combined with a statement, pipe, subshell, shell operator and a combination of thereof.
 
 To the configuration, the right value of "=>" is embedded in one of the Perl q() or qq() functions. q() behaves like single quote and qq() behaves like double quote. This also gives you the freedom to use quotation marks without escapes in your task definition.
 
