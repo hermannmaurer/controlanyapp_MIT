@@ -28,8 +28,8 @@ To get the definition of the tasks done users edit inside their controlanyapp sc
 If you need to have a sequence of commands within a single task shell operators like '&&' and '||' may prove beneficial between single cmds forcing a conditional sequence, instead of putting one shell command next ot each other terminated by semicolons. Keep in mind the sequence execution with operators depends on the return value of the individual cmd being executed.
 
 	task1 => q( cmd1; cmd2) # cmd1 and cmd2 are executed not depending on exit code of cmd1
-	task2 => q( cmd1 && cmd2) # cmd1 and cmd2 are executed depending on true exit code of cmd1
-	task3 => q( cmd1 || cmd2) # cmd1 and possbily cmd2 are executed depending on false exit code of cmd1
+	task2 => q( cmd1 && cmd2) # cmd1 and possibily cmd2 are executed depending on true exit code of cmd1
+	task3 => q( cmd1 || cmd2) # cmd1 and possibily cmd2 are executed depending on false exit code of cmd1
 
 A task is any pre-defined shell cmd/script/binary execution that may be combined with a statement, pipe, subshell, shell operator and a combination of thereof.
 
