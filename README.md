@@ -4,13 +4,15 @@ A free (MIT licensed) shell driven control interface for admins, integrators and
 
 This concept has emerged from my daily work as a solution integrator over many years being tired of stopping, starting, restarting, seing logs, greping logs, tailing logs for the purpose of testing, troubleshooting, maintaining and operating applications and Linux services. To handle these chores you have to remember and recall a lot of details and the admin guide is your best friend, but not any longer!
 
-First of all, convenient is an abstraction layer. An effective abstraction layer easy to manage. 
+First of all, convenient is an abstraction layer. An effective abstraction layer easy to manage.
+For the abstraction layer I introduce two terms: 'taskname' and the actual 'task' being executed.
+(taskname => task). Many examples will follow to get a grasp on this concept which is a simplification.
 
 For example, "Start( up an application)" is what someone wants to do, and the person basically does not care about what's happening at the shell level. And there needs to be the freedom to add other tasks like Stop, Restart, Status - there is no limit, except useful tasks. And everything what is executable via terminal on the shell can be used for task execution - a tcpdump statement or netstat to see whether traffic works etc.
 
 The REAL WORLD EXAMPLE below shows how to control tinyproxy and its related tasks with a single controlanyapp script. And the exectuable script is at the same time the configuration. So easy to manage. Get started with CONTROL_TEMPLATE.pl <mycontrolscript.pl>
 
-This way of working is effective and scales to a high degree as the commandline tasks required to be known for any kind of application are often identical from an abstraction point of view and they are preserved once written in a controlanyapp script. This is the concept supported and materialized by controlanyapp. Common tasknames are for example: stop, start, restart, status and what else comes into someone's mind. Those pre-defined tasks will be helpful for people working on CLI level for Linux applications just with the knowledge of the existance of a controlanyapp script.
+This way of working is effective and scales to a high degree as the commandline tasks required to be known for any kind of application are often identical from an abstraction point of view and they are preserved once written in a controlanyapp script. This is the concept supported and materialized by controlanyapp. Common tasknames are for example: stop, start, restart, status and what else comes into someone's mind. Those relating to pre-defined tasks (task definitions) will be helpful for people working on CLI level for Linux applications just with the knowledge of the existance of a controlanyapp script.
 
 The user interface keeps track of task execution in a log file recording the timestamp and taskname.
 
