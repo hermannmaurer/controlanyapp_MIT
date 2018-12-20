@@ -18,7 +18,7 @@ use Control::ScriptConnector;
 
 #our $ID="TESTSCRIPTCONNECTOR";
 
-my $service="my.service"; # specify your systemctl service
+my $service="ntp.service"; # specify your systemctl service
 
 our @TASKS= (
 	#key       => [Safety question, task to execute on shell]

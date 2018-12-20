@@ -10,7 +10,7 @@ package Control::Control;
 # COPYRIGHT (c) 2018 Hermann Maurer
 #
 #########################################
-our $VERSION = "01";
+our $VERSION = "1.0";
 #########################################
 
 use strict; use warnings;
@@ -269,47 +269,6 @@ SOFTWARE.
 
 END
 }
-
-#sub _readKey {
-#
-#	my $self=shift;	
-#	my $keyMap=shift;
-#	my $func=(caller(0))[3];
-#
-#	my $offset=$self->{offset};
-#
-#	# add quit
-#	$keyMap->{q}=""; # quit
-#	$keyMap->{'.'}=""; # verbose menue
-#	$keyMap->{':'}=""; # less log
-#	$keyMap->{'#'}=""; # show license
-#
-#	ReadMode "raw";
-#
-#	my $key;
-#	for(;;) {
-#		my $refTime=time();
-#		$key = ReadKey(0);
-#		if( exists $keyMap->{$key}) {
-#
-#			if( time() < $refTime + $offset) {
-#				#print " last key [$key]\n";
-#				next;
-#			}
-#			last;
-#		}
-#	}
-#	ReadMode "restore";
-#
-#	if( $key eq "q") {
-#
-#		print "bye!\n";
-#		exit;
-#	} 
-#	#print "key [$key]\n";
-#
-#	return $key;
-#}
 
 sub _readKey {
 
