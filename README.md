@@ -1,6 +1,6 @@
 # controlanyapp_MIT
 
-A free (MIT licensed) shell driven control interface for admins, integrators and testers - pre-defined task execution - minimizing commands to remember in grouping tasks inside a so called controlanyapp script.
+A free (MIT licensed) shell driven control interface for admins, integrators and testers - pre-defined task execution - minimizing commands to remember in grouping related tasks inside a so called controlanyapp script.
 
 This concept has emerged from my daily work as a solution integrator over many years being tired of stopping, starting, restarting, seing logs, greping logs, tailing logs for the purpose of testing, troubleshooting, maintaining and operating applications and Linux services. To handle these chores you have to remember and recall a lot of details and the admin guide is your best friend, but not any longer!
 
